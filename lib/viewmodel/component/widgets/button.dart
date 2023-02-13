@@ -20,14 +20,14 @@ class Button extends StatelessWidget {
                       top: 2.h, bottom: 1.h, left: 2.w, right: 2.w),
                   elevation: 2,
                   shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(25),
+                    borderRadius: BorderRadius.circular(20),
                   ),
                 ),
                 child: Text(
                   name!,
                   
                   style: TextStyle(
-                    fontSize: 15.sp,
+                    fontSize: 18.sp,
                     fontWeight: FontWeight.w500,
                     color: Colors.white,
                     fontFamily: 'Tajawal',

@@ -9,8 +9,8 @@ class ButtonBack extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 2.h,
-      width: 2.w,
+      height: 2.5.h,
+      width: 3.w,
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(
           primary: Colors.white,
@@ -18,7 +18,7 @@ class ButtonBack extends StatelessWidget {
               top: 0.5.h, bottom: 0.5.h, left: .5.w, right: 0.5.w),
           elevation: 2,
           shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(15),
+            borderRadius: BorderRadius.circular(10),
             side: BorderSide(
               color: Colors.grey.shade200,
               width: 1.2,

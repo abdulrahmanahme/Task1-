@@ -6,7 +6,7 @@ import 'package:responsive_sizer/responsive_sizer.dart';
 
 Widget dialog({Widget? widget ,double? height ,double ? width}){
   return Dialog(
-  
+  insetPadding: EdgeInsets.all(10),
   // backgroundColor: Colors.white,
   shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30.0)), //this right here
   child: ClipRect(
@@ -17,8 +17,8 @@ Widget dialog({Widget? widget ,double? height ,double ? width}){
                       height: height ,
                       width:  width,
                       //  color: Colors.white.withOpacity(.8),
-                      margin: EdgeInsets.all(20),
-                      padding: EdgeInsets.all(18),
+                      margin: EdgeInsets.all(1),
+                      padding: EdgeInsets.all(10),
                       //  decoration: ,
                       decoration: BoxDecoration(
                         // color: Colors.white.withOpacity(.3),

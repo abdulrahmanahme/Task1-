@@ -41,17 +41,17 @@ class _CreateAccountScreenState extends State<CreateAccountScreen> {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
-      
+      // toolbarHeight: 5.h,
         
          shape: RoundedRectangleBorder(
       borderRadius: BorderRadius.vertical(
-        bottom: Radius.circular(15),
+        bottom: Radius.circular(20),
       ),
     ),
               centerTitle: true,
 
     title: Text(
-                  'تسجيل الدخول',
+                  'تسجيل حساب',
                   style: TextStyle(
                     fontSize: 20,
                     fontWeight: FontWeight.w500,
@@ -60,10 +60,11 @@ class _CreateAccountScreenState extends State<CreateAccountScreen> {
                   ),
                 ),
         leading: Padding(
-
           padding: const EdgeInsets.only(left: 10, top: 10, right: 8, bottom: 8),
-          
-          child:ButtonBack(),
+          child:Padding(
+            padding: const EdgeInsets.all(3.0),
+            child: ButtonBack(),
+          ),
         ),
         backgroundColor: HexColor("#F6F6F6"),
         elevation: 0,
@@ -122,12 +123,16 @@ class _CreateAccountScreenState extends State<CreateAccountScreen> {
               labeText: 'كلمه المرور ',
               hintText: 'كلمه المرور',
               validationText: 'الرجاء ادخال كلمه المرور',
+                  suffixIcon: Icon(Icons.visibility_outlined),
+
             ),
             TextFormFieldWidget(
               controller: controllerLastname,
               labeText: ' تأكيد كلمه المرور ',
               hintText: 'كلمه المرور',
               validationText: 'الرجاء ادخال كلمه المرور',
+                  suffixIcon: Icon(Icons.visibility_outlined),
+
             ),
              Directionality(
                       textDirection: TextDirection.rtl,
@@ -138,7 +143,8 @@ class _CreateAccountScreenState extends State<CreateAccountScreen> {
             
                   child: CheckboxListTile(
                     visualDensity: VisualDensity.compact,
-                  title: Row(children: const[
+                  title: Row(
+                    children:[
                     Text(
                   'أوافق على ',
                   style: TextStyle(
@@ -157,9 +163,10 @@ class _CreateAccountScreenState extends State<CreateAccountScreen> {
                     fontFamily: 'Tajawal',
                   ),
                 ),
+                SizedBox(
+width: 10.w,
+                ),
                     IconText(),
-                
-
                   ],),
                   value: checkedValue,
                 
@@ -178,18 +185,8 @@ class _CreateAccountScreenState extends State<CreateAccountScreen> {
             ),
           
  
-            Burderbutton(name: 'تسجيل دخول',name1: 'لديك حساب؟', 
-            onPressed: (() {
-                Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) =>LayoutScreen()));
-            }),
-
-            ),
-            SizedBox(
-              height: 1.h,
-            ),
+            
+           
             Button(
                 name: 'تسجيل ',
                 onPressed: () {
@@ -231,8 +228,21 @@ class _CreateAccountScreenState extends State<CreateAccountScreen> {
                             ),
                           ));
                 }),
+ SizedBox(
+              height: 1.h,
+            ),
+        Burderbutton(name: 'سجل دخول',name1: 'لديك حساب؟', 
+            onPressed: (() {
+                Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) =>LayoutScreen()));
+            }),
 
-        
+            ),
+            SizedBox(
+              height: 5.h,
+            ),
            
           ]),
         ),

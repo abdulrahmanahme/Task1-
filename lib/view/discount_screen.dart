@@ -18,12 +18,15 @@ class DiscountScreen extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
           ClipRRect(
-            borderRadius: BorderRadius.circular(20),
+            borderRadius: BorderRadius.only(
+              topRight: Radius.circular(20),
+               topLeft: Radius.circular(20),
+            ),
             child: Container(
               height: Device.orientation == Orientation.portrait ? 82.h : 49.h,
               // width: Device.orientation == Orientation.portrait? 5.w:60.w,
               decoration: BoxDecoration(
-                color: Colors.amber,
+                // color: Colors.amber,
 
                 image:const DecorationImage(
                   image: AssetImage('assets/image/discount.png'),
@@ -35,73 +38,70 @@ class DiscountScreen extends StatelessWidget {
             ),
           ),
           Spacer(),
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: ClipRRect(
-                borderRadius: BorderRadius.circular(25),
-                child: Column(
-                  children: [
-                    Row(
-                      children: [
-                        StartIcon(
-                          color: Colors.blue,
-                        ),
-                      ],
-                    ),
-                    Container(
-                        height: 100,
-                        width: double.infinity,
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.end,
-                          children: [
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                StartIcon(
-                                  color: Colors.grey.shade400,
-                                ),
-                                SizedBox(
-                                  width: 1.h,
-                                ),
-                                StartIcon(
-                                  color: Colors.grey.shade400,
-                                ),
-                                SizedBox(
-                                  width: 1.h,
-                                ),
-                                StartIcon(
-                                  color: Colors.grey.shade400,
-                                ),
-                                SizedBox(
-                                  width: 1.h,
-                                ),
-                                StartIcon(
-                                  color: Colors.grey.shade400,
-                                ),
-                                 SizedBox(
-                                  width: 1.h,
-                                ),
-                                StartIcon(
-                                  color: Colors.blue,
-                                ),
-                               
-                              ],
-                            ),
-                            SizedBox(
-                              height: 1.h,
-                            ),
-                            ButtonStart(
-                              onPressed: (){
-                                Navigator.push(context, MaterialPageRoute(builder: ((context) => LoginScreen())));
-                              },
+          ClipRRect(
+              borderRadius: BorderRadius.circular(40),
+              child: Column(
+                children: [
+                  Row(
+                    children: [
+                      StartIcon(
+                        color: Colors.blue,
+                      ),
+                    ],
+                  ),
+                  Container(
+                      height: 100,
+                      width: double.infinity,
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              StartIcon(
+                                color: Colors.grey.shade400,
+                              ),
+                              SizedBox(
+                                width: 1.h,
+                              ),
+                              StartIcon(
+                                color: Colors.grey.shade400,
+                              ),
+                              SizedBox(
+                                width: 1.h,
+                              ),
+                              StartIcon(
+                                color: Colors.grey.shade400,
+                              ),
+                              SizedBox(
+                                width: 1.h,
+                              ),
+                              StartIcon(
+                                color: Colors.grey.shade400,
+                              ),
+                               SizedBox(
+                                width: 1.h,
+                              ),
+                              StartIcon(
+                                color: Colors.blue,
+                              ),
+                             
+                            ],
+                          ),
+                          SizedBox(
+                            height: 1.h,
+                          ),
+                          ButtonStart(
+                            onPressed: (){
+                              Navigator.push(context, MaterialPageRoute(builder: ((context) => LoginScreen())));
+                            },
 
-                            ),
-                          ],
-                        ),
-                        color: Colors.white),
-                  ],
-                )),
-          ),
+                          ),
+                        ],
+                      ),
+                      color: Colors.white),
+                ],
+              )),
         ],
       ),
     );

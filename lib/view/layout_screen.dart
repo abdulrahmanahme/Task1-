@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
+import 'package:responsive_sizer/responsive_sizer.dart';
 import 'package:task/view/create_business.dart';
 
 class LayoutScreen extends StatefulWidget {
@@ -45,6 +46,9 @@ class _LayoutScreenState extends State<LayoutScreen> {
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: <Widget>[
               Material(
+                
+                color: Colors.white,
+
                 child: Center(
                   child: InkWell(
                     focusColor: Colors.transparent,
@@ -71,6 +75,7 @@ class _LayoutScreenState extends State<LayoutScreen> {
                 ),
               ),
               Material(
+                color: Colors.white,
                 child: Center(
                   child: InkWell(
                     focusColor: Colors.transparent,
@@ -95,8 +100,25 @@ class _LayoutScreenState extends State<LayoutScreen> {
                   ),
                 ),
               ),
+                          Column(
+                            mainAxisAlignment: MainAxisAlignment.end,
+                            children: [
+                              Row(
+                                mainAxisAlignment: MainAxisAlignment.start,
+                                children: [
+                                  Padding(
+                                    padding:  EdgeInsets.only(left: 5.w),
+                                    child: Text("اضف اعلانك"),
+                                  ),
+                                ],
+                              ),
+                            ],
+                          ),
+
               SizedBox(), //to make space for the floating button
               Material(
+                color: Colors.white,
+
                 child: Center(
                   child: InkWell(
                       focusColor: Colors.transparent,
@@ -121,9 +143,11 @@ class _LayoutScreenState extends State<LayoutScreen> {
                 ),
               ),
 //            Column(
-//
+
 
               Material(
+                color: Colors.white,
+
                 child: Center(
                   child: InkWell(
                     focusColor: Colors.blueAccent,

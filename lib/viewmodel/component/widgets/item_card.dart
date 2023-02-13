@@ -14,29 +14,38 @@ class ProfileButton extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.all(10.0),
       child: Container(
-        
+   
         child: Row(
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
-            Container(
-              height: 5.h,
-              width: 10.w,
-              padding: const EdgeInsets.all(10),
-              decoration: BoxDecoration(
-                //  shape: BoxShape.circle,
+            PhysicalModel(
+  color: Colors.white,
+  elevation: 8,
+  shadowColor: Colors.black,
+  borderRadius: BorderRadius.circular(10),
 
-                color: Colors.grey.shade300,
-                borderRadius: BorderRadius.circular(20.0),
-              ),
-              child: ImageIcon(
-                icon,
-                color: Color(0xff0093F5),
+
+        
+              child: Container(
+                height: 5.2.h,
+                width: 10.w,
+                padding: const EdgeInsets.all(10),
+                decoration: BoxDecoration(
+                  //  shape: BoxShape.circle,
+            
+                  color: Colors.white,
+                  borderRadius: BorderRadius.circular(25.0),
+                ),
+                child: ImageIcon(
+                  icon,
+                  color: Color(0xff0093F5),
+                ),
               ),
             ),
            
            
             SizedBox(
-              width: 1.w,
+              width: 2.5.w,
             ),
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -44,10 +53,10 @@ class ProfileButton extends StatelessWidget {
                 Text(
                   name!,
                   style: TextStyle(
-                    fontSize: 18.sp,
+                    fontSize: 17.sp,
                     color: Colors.black,
                     // fontWeight: FontWeight.w500,
-                    fontFamily: 'Poppins',
+                    fontFamily: 'Tajawal',
                   ),
                   textAlign: TextAlign.center,
                 ),
@@ -61,7 +70,7 @@ class ProfileButton extends StatelessWidget {
                           fontSize: 15.sp,
                           color: Colors.grey,
                           // fontWeight: FontWeight.w500,
-                          fontFamily: 'Poppins',
+                          fontFamily: 'Tajawal',
                         ),
                         textAlign: TextAlign.center,
                       ),

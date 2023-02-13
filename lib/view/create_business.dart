@@ -46,14 +46,15 @@ class _BussinessAccountState extends State<BussinessAccount> {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
+        // toolbarHeight: 5.h,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.vertical(
-            bottom: Radius.circular(15),
+            bottom: Radius.circular(20),
           ),
         ),
         centerTitle: true,
         title: Text(
-          'تسجيل حساب شركه',
+          'انشاء حساب شركة',
           style: TextStyle(
             fontSize: 20,
             fontWeight: FontWeight.w500,
@@ -88,22 +89,26 @@ class _BussinessAccountState extends State<BussinessAccount> {
               ),
               child: Container(
                 height: 18.h,
-                width: 30.w,
+                width: 38.w,
 
                 // shape: BoxShape.circle,
 
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Container(
-                      height: 10.h,
-                      width: 25.w,
-                      decoration: const BoxDecoration(
-                        image: DecorationImage(
-                          image: AssetImage('assets/image/camera3.png'),
-                          fit: BoxFit.cover,
+                    Padding(
+                      padding: const EdgeInsets.all(10.0),
+                      child: Container(
+                        height: 8.h,
+                        width: 20.w,
+                        
+                        decoration: const BoxDecoration(
+                          image: DecorationImage(
+                            image: AssetImage('assets/image/camera4.png'),
+                            fit: BoxFit.cover,
+                          ),
+                          // shape: BoxShape.circle,
                         ),
-                        // shape: BoxShape.circle,
                       ),
                     ),
                     SizedBox(
@@ -183,16 +188,13 @@ class _BussinessAccountState extends State<BussinessAccount> {
               controller: controllerLastname,
               labeText: 'كلمه المرور ',
               hintText: 'كلمه المرور',
+                  suffixIcon: Icon(Icons.visibility_outlined),
+
               validationText: 'الرجاء ادخال كلمه المرور',
             ),
-            TextFormFieldWidget(
-              controller: controllerLastname,
-              labeText: ' تأكيد كلمه المرور ',
-              hintText: 'كلمه المرور',
-              validationText: 'الرجاء ادخال كلمه المرور',
-            ),
+           
             Padding(
-              padding: EdgeInsets.only(right: 5.h, top: 2.h),
+              padding: EdgeInsets.only(right: 5.h, top: 2.h,),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
@@ -217,49 +219,54 @@ class _BussinessAccountState extends State<BussinessAccount> {
                         5.0) //                 <--- border radius here
                     ),
               ),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Container(
-                    height: 4.h,
-                    width: 8.w,
-                    decoration: const BoxDecoration(
-                      image: DecorationImage(
-                        image: AssetImage('assets/image/face1.png'),
-                        fit: BoxFit.cover,
+              child: Padding(
+                padding: const EdgeInsets.all(5.0),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                   
+                    Container(
+                      height: 4.h,
+                      width: 8.w,
+                      decoration: const BoxDecoration(
+                        image: DecorationImage(
+                          image: AssetImage('assets/image/face1.png'),
+                          fit: BoxFit.cover,
+                        ),
+                        // shape: BoxShape.circle,
                       ),
-                      // shape: BoxShape.circle,
                     ),
-                  ),
-                  // SizedBox(width: 1,),
-                  Container(
-                    height: 4.h,
-                    width: 10.w,
-                    decoration: const BoxDecoration(
-                      image: DecorationImage(
-                        image: AssetImage('assets/image/twee2.png'),
-                        fit: BoxFit.cover,
+                    // SizedBox(width: 1,),
+                    Padding(
+                      padding: EdgeInsets.only(left: 8.w,right: 8.w),
+                      child: Container(
+                        height: 4.h,
+                        width: 10.w,
+                        decoration: const BoxDecoration(
+                          image: DecorationImage(
+                            image: AssetImage('assets/image/twee2.png'),
+                            fit: BoxFit.cover,
+                          ),
+                          // shape: BoxShape.circle,
+                        ),
                       ),
-                      // shape: BoxShape.circle,
                     ),
-                  ),
 
-                  const ImageWidget(
-                    image: 'assets/image/inst.png',
-                  ),
+                    const ImageWidget(
+                      image: 'assets/image/inst.png',
+                    ),
 
-                  const ImageWidget(
-                    image: 'assets/image/locat.png',
-                  ),
+                    const ImageWidget(
+                      image: 'assets/image/locat.png',
+                    ),
+ 
+                    const ImageWidget(
+                      image: 'assets/image/link.png',
+                    ),
 
-                  const ImageWidget(
-                    image: 'assets/image/link.png',
-                  ),
-
-                  SizedBox(
-                    width: 1.w,
-                  ),
-                ],
+                   
+                  ],
+                ),
               ),
             ),
             Container(
@@ -281,10 +288,10 @@ class _BussinessAccountState extends State<BussinessAccount> {
                         padding: const EdgeInsets.all(8.0),
                         child: Container(
                           height: 10.h,
-                          width: 20.w,
+                          width: 25.w,
                           decoration: const BoxDecoration(
                             image: DecorationImage(
-                              image: AssetImage('assets/image/camera.png'),
+                              image: AssetImage('assets/image/camera4.png'),
                               fit: BoxFit.cover,
                             ),
                             // shape: BoxShape.circle,
@@ -311,7 +318,7 @@ class _BussinessAccountState extends State<BussinessAccount> {
             Directionality(
               textDirection: TextDirection.rtl,
               child: defaultFormField(
-                hintText: ' يرجى كتابة نبزى عن نشاتك',
+                hintText: ' يرجى كتابة نبزى عن نشاطك',
                 maxLines: 5,
                 labelStyle: TextStyle(
                   fontSize: 17.sp,
@@ -334,13 +341,13 @@ class _BussinessAccountState extends State<BussinessAccount> {
             Directionality(
               textDirection: TextDirection.rtl,
               child: Padding(
-                padding: const EdgeInsets.only(right: 20),
+                padding: EdgeInsets.only(right: 5.w),
                 child: Transform.scale(
                   scale: 1.2,
                   child: CheckboxListTile(
                     visualDensity: VisualDensity.compact,
                     title: Row(
-                      children: const [
+                      children:  [
                         Text(
                           'أوافق على ',
                           style: TextStyle(
@@ -359,7 +366,7 @@ class _BussinessAccountState extends State<BussinessAccount> {
                             fontFamily: 'Tajawal',
                           ),
                         ),
-                        IconText(),
+                        
                       ],
                     ),
                     value: checkedValue,
@@ -389,7 +396,7 @@ class _BussinessAccountState extends State<BussinessAccount> {
                       context: context,
                       builder: (BuildContext context) => dialog(
                             height: Device.orientation == Orientation.portrait
-                                ? 45.h
+                                ? 42.h
                                 : 49.h,
                             width: Device.orientation == Orientation.portrait
                                 ? 50.w
@@ -397,59 +404,71 @@ class _BussinessAccountState extends State<BussinessAccount> {
                             widget: Column(
                               mainAxisAlignment: MainAxisAlignment.start,
                               children: [
-                                Row(
-                                  mainAxisAlignment:
-                                      MainAxisAlignment.spaceBetween,
-                                  children: [
-                                    Container(
-                                      height: 5.h,
-                                      width: 9.w,
-                                      child: ElevatedButton(
-                                        style: ElevatedButton.styleFrom(
-                                          primary: Colors.white,
-                                          padding: EdgeInsets.only(
-                                              top: 0.5.h,
-                                              bottom: 0.5.h,
-                                              left: .5.w,
-                                              right: 0.5.w),
-                                          elevation: 2,
-                                          shape: RoundedRectangleBorder(
-                                            borderRadius:
-                                                BorderRadius.circular(20),
-                                            side: BorderSide(
-                                              color: Colors.grey.shade200,
-                                              width: 1.2,
-                                            ),
-                                          ),
-                                        ),
-                                        child: Center(
-                                          child: Icon(
-                                            Icons.close,
-                                            size: 25,
-                                            color: Colors.black,
-                                          ),
-                                        ),
-                                        onPressed: () {
-                                          Navigator.pop(context);
-                                        },
-                                      ),
-                                    ),
-                                    // IconButton(onPressed: (){}, icon: Icon(Icons.close,size: 25,)),
 
-                                    Padding(
-                                      padding: const EdgeInsets.all(15.0),
-                                      child: Text(
-                                        'مميزات انضمام المتجر الينا',
-                                        style: TextStyle(
-                                          fontSize: 15.sp,
-                                          fontWeight: FontWeight.w500,
-                                          color: Color(0XFF0099FF),
-                                          fontFamily: 'Tajawal',
+                                 Row(
+                                  mainAxisAlignment: MainAxisAlignment.start,
+                                   children: [
+                                     Container(
+                                          height: 5.h,
+                                          width: 9.w,
+                                          child: ElevatedButton(
+                                            style: ElevatedButton.styleFrom(
+                                              primary: Colors.white,
+                                              padding: EdgeInsets.only(
+                                                  top: 0.5.h,
+                                                  bottom: 0.5.h,
+                                                  left: .5.w,
+                                                  right: 0.5.w),
+                                              elevation: 2,
+                                              shape: RoundedRectangleBorder(
+                                                borderRadius:
+                                                    BorderRadius.circular(10),
+                                                side: BorderSide(
+                                                  color: Colors.grey.shade200,
+                                                  width: 1.5,
+                                                ),
+                                              ),
+                                            ),
+                                            child: Padding(
+                                              padding: const EdgeInsets.all(1.0),
+                                              child: Center(
+                                                child: Icon(
+                                                  Icons.close,
+                                                  size: 25,
+                                                  color: Colors.black,
+                                                ),
+                                              ),
+                                            ),
+                                            onPressed: () {
+                                              Navigator.pop(context);
+                                            },
+                                          ),
                                         ),
+                                        SizedBox(
+width: 10.w,
+                                        ),
+                                        // Spacer(),
+                                          Text(
+                                      'مميزات انضمام المتجر ',
+                                      style: TextStyle(
+                                        fontSize: 17.sp,
+                                        fontWeight: FontWeight.w500,
+                                        color: Color(0XFF0099FF),
+                                        fontFamily: 'Tajawal',
                                       ),
                                     ),
-                                  ],
-                                ),
+                                   ],
+                                 ),
+                                 Text(
+                                      'الينا',
+                                      style: TextStyle(
+                                        fontSize: 17.sp,
+                                        fontWeight: FontWeight.w500,
+                                        color: Color(0XFF0099FF),
+                                        fontFamily: 'Tajawal',
+                                      ),
+                                    ),
+                               
                                 Directionality(
                                   textDirection: TextDirection.rtl,
                                   child: ProfileButton(
@@ -474,25 +493,48 @@ class _BussinessAccountState extends State<BussinessAccount> {
                                     type: 'مميزات فريدة للأنشطة التجارية',
                                   ),
                                 ),
-                                
-                                Button(
-              name: 'انضم الان ',
-              onPressed: (() {
+                                Container(
+              width: 65.w,
+              child: ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  primary: Color(0XFF0099FF),
+                  padding: EdgeInsets.only(
+                      top: 2.h, bottom: 1.h, left: 2.w, right: 2.w),
+                  elevation: 2,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                ),
+                child: Text(
+                 'انضم الأن ',
+                  
+                  style: TextStyle(
+                    fontSize: 18.sp,
+                    fontWeight: FontWeight.w500,
+                    color: Colors.white,
+                    fontFamily: 'Tajawal',
+                  ),
+                ),
+                  onPressed: (() {
                 
               }),
-             
+              ),
             ),
+                                
                               ],
                             ),
                           ));
                 }),
+                 SizedBox(
+              height: 1.h,
+            ),
             Burderbutton(
-              name: 'تسجيل دخول',
+              name: 'سجل دخول',
               name1: 'لديك حساب؟',
               onPressed: (){},
             ),
             SizedBox(
-              height: 4.h,
+              height: 5.h,
             ),
           ]),
         ),

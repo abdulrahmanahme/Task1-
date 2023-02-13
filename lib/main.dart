@@ -26,14 +26,19 @@ class MyApp extends StatelessWidget {
           primarySwatch: Colors.blue,
         ),
         home: AnimatedSplashScreen(
+          
           duration: 200,
           splash: SplashScreen(),
-          nextScreen:const DiscountScreen(),
+          
+          nextScreen: DiscountScreen(),
           backgroundColor: Color(0xff0093F5),
-          // backgroundColor: Colors.blue,
-          splashTransition: SplashTransition.decoratedBoxTransition,
+        
+          splashTransition: SplashTransition.fadeTransition,
           splashIconSize: 800,
+               
         ),
+        // home: SplashScreen(),
+        // home: DiscountScreen(),
       );
     });
   }
